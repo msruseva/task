@@ -1,0 +1,16 @@
+<h2 style="color: #6BDB31;">All reviews for <%= @book.title %></h2>
+
+<h5 style="color: red;"><%= flash[:notice] if flash[:notice] %></h5>
+
+<table>
+	<tr>
+		<td>Book</td>
+		<td>Content</td>
+		<td>Rating</td>
+	</tr>
+
+	<%= render @reviews %>
+</table>
+
+<%= will_paginate @reviews %>
+<h5><%= link_to "Create", new_book_review_path %></h5>

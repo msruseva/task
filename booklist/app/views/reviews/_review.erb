@@ -1,0 +1,7 @@
+<tr>
+	<td><%= link_to @book.title, book_path(@book) %></td>
+	<td><%= review.content %></td>
+	<td><%= review.rating %></td>
+	<td><%= link_to "Edit", edit_book_review_path(@book, review) %></td>
+	<td><%= link_to "Delete", book_review_path(@book, review) , method: :delete, data: { confirm: 'Are you sure?' }  %></td>
+</tr>

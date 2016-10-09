@@ -1,0 +1,8 @@
+<h2 style="color: #6BDB31;">Create review</h2>
+
+<%= form_for(@review, method: :post, url: book_reviews_path(@book, @review)) do |f| %>
+	<%= f.label :content %> <%= f.text_area :content %>
+	<%= f.label :rating %> <%= f.text_field :rating %>
+	
+	<%= f.submit %>
+<% end %>

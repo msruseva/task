@@ -1,0 +1,7 @@
+<tr>
+	<td><%= image_tag book.photo.url %></td>
+	<td><%= book.title %></td>
+	<td><%= book.isbn %></td>
+	<td><%= book.avg_rating(book)%></td>
+	<td><%= link_to book.title, book_path(book) %></td>
+</tr>

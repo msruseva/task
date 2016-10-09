@@ -1,0 +1,29 @@
+<h2 style="color: #AB6BE0;">Book - <%= @book.title %></h2>
+
+<table>
+	<tr>
+		<th>Photo</th>
+		<th>Title</th>
+		<th>ISBN</th>
+		<th>AVG rating</th>
+		<th>Last three reviews</th>
+	</tr>
+
+	<tr>
+		<td><%= image_tag @book.photo.url %></td>
+		<td><%= @book.title %></td>
+		<td><%= @book.isbn %></td>
+		<td><%= @book.avg_rating(@book)%></td>
+		<td><% @reviews.each do |review| %>
+			<ul><%= review.content %></ul>
+		<% end %>
+		</td>
+		<td><%= link_to "Edit", edit_book_path %></td>
+		<td><%= link_to "Destroy", @book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	</tr>
+</table>
+
+
+<h5><%= link_to "Add review", new_book_review_path(@book) %><br></h5>
+<h5><%= link_to "Books", books_path %><br></h5>
+<h5><%= link_to "Reviews", book_reviews_path(@book) %></h5>
