@@ -1,6 +1,3 @@
 Exercise for:
-- actions in rails
-    - create;
-    - edit;
-    - delete.
+- REST in rails;
 - little magic in rails.
